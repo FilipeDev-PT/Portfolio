@@ -13,7 +13,7 @@ export default function Layout({ children }) {
 
   const navigate = useNavigate();
   const [pagina, setPagina] = useState(
-    url.split("/").pop() == "Postifolio"
+    url.split("/").pop() == "Portfolio"
       ? 0
       : parseInt(urlPages.indexOf(url.split("/").pop()))
   );
