@@ -1,0 +1,10 @@
+.iconLateralNavigate {
+  cursor: pointer;
+  color: var(--colorTextDefault);
+  width: 80%;
+  height: 80%;
+}
+
+.iconLateralNavigate:hover {
+  transform: scale(1.1);
+}

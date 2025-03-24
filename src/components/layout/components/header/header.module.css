@@ -1,0 +1,26 @@
+.header {
+  display: flex;
+  position: relative;
+  height: 10%;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+
+  .contentButtonsHeader {
+    display: flex;
+    width: 60%;
+    justify-content: space-around;
+  }
+
+  @media (max-width: 768px) {
+    .contentButtonsHeader {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+  }
+}

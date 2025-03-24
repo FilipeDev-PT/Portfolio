@@ -1,0 +1,41 @@
+[theme="Light"] {
+  --colorPrimary: black;
+  --colorSecundary: rgba(0, 0, 0, 0.5);
+  --colorTextDefault: white;
+  --colorTextReserve: black;
+  --colorSolid: gray;
+}
+
+[theme="Dark"] {
+  --colorPrimary: ;
+  --colorSecundary: ;
+  --colorTextDefault: ;
+  --colorTextReserve: ;
+  --colorSolid: ;
+}
+
+* {
+  padding: 0px;
+  border: 0px;
+  margin: 0px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  width: 100dvw;
+  height: 100dvh;
+}
+
+#root {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+  color: var(--colorTextDefault);
+  background-color: var(--colorSolid);
+}

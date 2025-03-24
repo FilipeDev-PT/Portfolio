@@ -1,0 +1,51 @@
+.divContentSkill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 15%;
+  height: 100%;
+  overflow-x: hidden;
+
+  .imgSkills {
+    display: flex;
+    position: absolute;
+    border-radius: 50%;
+    top: 15%;
+    width: 100px;
+    height: auto;
+    background-color: var(--colorSolid);
+  }
+
+  & p {
+    display: flex;
+    position: absolute;
+
+    top: 40%;
+    text-align: center;
+    font-size: calc(5px + 0.5em);
+  }
+}
+
+@media (max-width: 768px) {
+  .divContentSkill {
+    flex-direction: initial;
+    width: 100%;
+    height: 15%;
+
+    .imgSkills {
+      position: relative;
+      height: 80%;
+      width: auto;
+    }
+
+    & p {
+      position: relative;
+    }
+  }
+}
+
+.divContentSkill::-webkit-scrollbar {
+  display: none;
+}
