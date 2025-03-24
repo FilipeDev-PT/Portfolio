@@ -11,7 +11,7 @@ const routesApp = () => {
   return (
     <BackdropAction>
       <Routes>
-        <Route path="/Postifolio" element={<About />} />
+        <Route path="/Portfolio" element={<About />} />
         <Route path="/about" element={<About />} />
         <Route path="/skills" element={<Skills />} />
         <Route path="/projects" element={<Project />} />
