@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
   width: 20%;
   gap: 15px;
 
@@ -14,6 +15,23 @@
 
   & img {
     width: 100%;
+    cursor: pointer;
+  }
+
+  & img:hover {
+    transform: scale(1.1);
+  }
+
+  .imgSelect {
+    display: flex;
+    z-index: 10;
+    position: fixed;
+    top: 5%;
+    width: 90%;
+  }
+  .imgSelect:hover {
+    transform: scale(1);
+    cursor: auto;
   }
 
   .divIconsProject {
@@ -31,4 +49,15 @@
       width: 20%;
     }
   }
+}
+
+.divCloseImg {
+  display: flex;
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  top: 0px;
+  right: 0px;
+  color: var(--colorTextDefault);
+  z-index: 50;
 }

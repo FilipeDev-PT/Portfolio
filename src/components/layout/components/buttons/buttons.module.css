@@ -5,3 +5,7 @@
   background: #00000000;
   color: var(--colorTextDefault);
 }
+
+.buttonsHeaderNavigateActive {
+  color: var(--colorSolid);
+}

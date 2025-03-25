@@ -61,5 +61,9 @@
   .divContentTitle {
     width: 70%;
     gap: 3vw;
+
+    & p {
+      font-size: 2vw;
+    }
   }
 }
