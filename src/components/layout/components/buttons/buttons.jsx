@@ -1,10 +1,12 @@
 import style from "./buttons.module.css";
 
-export default function Buttons({ text, onClick, number, styles }) {
+export default function Buttons({ initial, text, onClick, number, styles }) {
   return (
     <button
       className={`${style.buttonsHeaderNavigate} ${
-        styles == number ? style.buttonsHeaderNavigateActive : ""
+        styles == number || initial != ""
+          ? style.buttonsHeaderNavigateActive
+          : ""
       }`}
       onClick={() => onClick(number)}
     >

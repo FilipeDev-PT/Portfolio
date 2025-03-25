@@ -22,8 +22,9 @@ export default function Layout({ children }) {
   );
 
   const navigate = useNavigate();
+
   const [pagina, setPagina] = useState(
-    url.split("/").pop() === ""
+    url.split("/").pop() == "Portfolio"
       ? 1
       : parseInt(urlPages.indexOf(url.split("/").pop()))
   );
