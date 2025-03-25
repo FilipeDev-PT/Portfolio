@@ -15,9 +15,9 @@ export default function Header({ constPagina, urlPageina }) {
     <header className={style.header}>
       <h3>Filipe Cristovam</h3>
       <div className={style.contentButtonsHeader}>
-        <Buttons text={"ABOUT"} onClick={handleButtonEspecific} number={0} />
-        <Buttons text={"SKILLS"} onClick={handleButtonEspecific} number={1} />
-        <Buttons text={"PROJECTS"} onClick={handleButtonEspecific} number={2} />
+        <Buttons text={"ABOUT"} onClick={handleButtonEspecific} number={1} />
+        <Buttons text={"SKILLS"} onClick={handleButtonEspecific} number={2} />
+        <Buttons text={"PROJECTS"} onClick={handleButtonEspecific} number={3} />
       </div>
     </header>
   );

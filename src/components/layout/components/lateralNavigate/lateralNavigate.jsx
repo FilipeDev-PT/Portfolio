@@ -1,5 +1,5 @@
 import style from "./lateralnavigate.module.css";
-import IconLabel from "../icon/icons";
+import IconLabel from "../../../icons/icons";
 
 export default function LateralNavigate() {
   return (

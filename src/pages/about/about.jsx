@@ -16,10 +16,14 @@ export default function About() {
           </div>
           <div>
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus
-              itaque dignissimos quae qui pariatur recusandae, possimus earum
-              quas cupiditate ea expedita, repudiandae sed ipsa deleniti ad
-              repellendus quidem ipsum exercitationem!
+              Olá, eu sou Filipe. Desenvolvo projetos em React, principalmente.
+              Participei da criação de aplicações de controle de obra para a
+              FGR, desenvolvi soluções de problemas financeiros, contábeis e de
+              produção, tanto para a G.A. Silva quanto para a FGR. Sou um amante
+              por tecnologia e amo receber novos desafios. Busco uma empresa
+              onde consiga desenvolver minhas habilidades como programador,
+              evoluir e no futuro liderar equipes de desenvolvimento, para assim
+              ajudar no crescimento da empresa.
             </p>
           </div>
         </div>

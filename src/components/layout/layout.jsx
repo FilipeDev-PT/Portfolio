@@ -9,17 +9,17 @@ import LateralNavigate from "./components/lateralNavigate/lateralNavigate";
 export default function Layout({ children }) {
   const url = window.location.href;
 
-  const urlPages = ["about", "skills", "projects"];
+  const urlPages = ["Portfolio", "about", "skills", "projects"];
 
   const navigate = useNavigate();
   const [pagina, setPagina] = useState(
-    url.split("/").pop() == "Portfolio"
-      ? 0
+    url.split("/").pop() === ""
+      ? 1
       : parseInt(urlPages.indexOf(url.split("/").pop()))
   );
 
   const handleMoreNumberPage = () => {
-    if (pagina < 2) {
+    if (pagina < 3) {
       const page = pagina + 1;
       setPagina(page);
       const urlpage = urlPages[page];
@@ -28,7 +28,7 @@ export default function Layout({ children }) {
   };
 
   const handleLessNumberPage = () => {
-    if (pagina > 0) {
+    if (pagina > 1) {
       const page = pagina - 1;
       setPagina(page);
       const urlpage = urlPages[page];

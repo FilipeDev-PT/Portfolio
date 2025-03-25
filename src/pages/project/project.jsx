@@ -10,26 +10,10 @@ export default function Project() {
         <ItensProject
           link={appControle}
           content={
-            "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas possimus culpa nesciunt ipsa est ducimus expedita sed aliquid velit, enim corrupti nemo repudiandae architecto dolorem totam consequuntur illo explicabo exercitationem?"
+            "Aplicativo de controle de obra, feito inteiramente por mim, sendo realizado todo o banco de dados, backend em C# e frontend em React. Aplicativo responsavel por consulta de medições, remanejamento de saldo de contratos (reformas), e um backend excluiso para criação de programações."
           }
-        />
-        <ItensProject
-          link={appControle}
-          content={
-            "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas possimus culpa nesciunt ipsa est ducimus expedita sed aliquid velit, enim corrupti nemo repudiandae architecto dolorem totam consequuntur illo explicabo exercitationem?"
-          }
-        />
-        <ItensProject
-          link={appControle}
-          content={
-            "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas possimus culpa nesciunt ipsa est ducimus expedita sed aliquid velit, enim corrupti nemo repudiandae architecto dolorem totam consequuntur illo explicabo exercitationem?"
-          }
-        />
-        <ItensProject
-          link={appControle}
-          content={
-            "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas possimus culpa nesciunt ipsa est ducimus expedita sed aliquid velit, enim corrupti nemo repudiandae architecto dolorem totam consequuntur illo explicabo exercitationem?"
-          }
+          linkGitHub={"https://github.com/FilipeDev-PT/AppControle"}
+          linkSite={"https://filipedev-pt.github.io/AppControle/"}
         />
       </div>
     </Layout>
