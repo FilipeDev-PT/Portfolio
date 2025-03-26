@@ -42,6 +42,13 @@
 }
 
 @media (max-width: 768px) {
+  .container {
+    gap: 1%;
+  }
+  .conteinerContent {
+    width: 80%;
+    height: 70%;
+  }
   .conteinerContentChildren {
     justify-content: start;
   }
@@ -58,11 +65,12 @@
 
 .iconsRight:hover,
 .iconsLeft:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .divIconsChevron {
   display: flex;
-  width: 2%;
+  width: 3%;
+  min-width: 18px;
   height: 4%;
 }

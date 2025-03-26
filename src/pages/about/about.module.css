@@ -53,17 +53,25 @@
 
       .imgAbout {
         display: flex;
-        width: 35%;
+        width: 50%;
       }
     }
   }
 
   .divContentTitle {
     width: 70%;
-    gap: 3vw;
+    gap: ;
+
+    & h3 {
+      font-size: 5vw;
+    }
+
+    & h4 {
+      font-size: 5vw;
+    }
 
     & p {
-      font-size: 2vw;
+      font-size: 2.5vw;
     }
   }
 }

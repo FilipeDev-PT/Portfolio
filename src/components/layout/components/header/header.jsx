@@ -16,21 +16,21 @@ export default function Header({ constPagina, setConstPagina, urlPageina }) {
       <h3>Filipe Cristovam</h3>
       <div className={style.contentButtonsHeader}>
         <Buttons
-          text={"ABOUT"}
+          text={"About"}
           onClick={handleButtonEspecific}
           number={1}
           styles={constPagina}
           initial={`${constPagina == 1 ? "initial" : ""}`}
         />
         <Buttons
-          text={"SKILLS"}
+          text={"Skills"}
           onClick={handleButtonEspecific}
           number={2}
           styles={constPagina}
           initial={""}
         />
         <Buttons
-          text={"PROJECTS"}
+          text={"Projects"}
           onClick={handleButtonEspecific}
           number={3}
           styles={constPagina}

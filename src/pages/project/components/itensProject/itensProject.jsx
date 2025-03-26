@@ -10,7 +10,11 @@ export default function ItensProject({ link, content, linkGitHub, linkSite }) {
   };
 
   return (
-    <div className={style.divItensProject}>
+    <div
+      className={`${style.divItensProject} ${
+        imgSelect ? style.imgDivSelect : ""
+      }`}
+    >
       {imgSelect ? (
         <div className={style.divCloseImg} onClick={handleImgFull}>
           <IconLabel name={"X"} />

@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  width: 20%;
+  width: 50%;
   gap: 15px;
 
   & p {
@@ -29,6 +29,7 @@
     top: 5%;
     width: 90%;
   }
+
   .imgSelect:hover {
     transform: scale(1);
     cursor: auto;
@@ -36,18 +37,6 @@
 
   .divIconsProject {
     display: flex;
-  }
-}
-
-@media (max-width: 768px) {
-  .divItensProject {
-    flex-direction: initial;
-    width: 100%;
-    height: 20%;
-
-    & img {
-      width: 20%;
-    }
   }
 }
 
@@ -60,4 +49,28 @@
   right: 0px;
   color: var(--colorTextDefault);
   z-index: 50;
+}
+
+.imgDivSelect {
+  bottom: -17%;
+}
+
+@media (max-width: 768px) {
+  .divItensProject {
+    width: 100%;
+    height: 20%;
+
+    & img {
+      width: 70%;
+    }
+  }
+
+  .imgDivSelect {
+    bottom: -10%;
+  }
+
+  .divCloseImg {
+    width: 35px;
+    height: 35px;
+  }
 }
