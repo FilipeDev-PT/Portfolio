@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --accent: #8b5cf6;
+  --accent-muted: rgba(139, 92, 246, 0.15);
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #020617; /* slate-950 */
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: inherit;
+}
+
+#root {
+  min-height: 100vh;
+  overflow-x: hidden;
+}

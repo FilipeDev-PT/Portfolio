@@ -1,0 +1,102 @@
+{
+  "nav": {
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "skills": "Skills",
+    "contact": "Contact"
+  },
+  "hero": {
+    "tagline": "Developer & problem solver",
+    "subtitle": "I build web applications with a focus on clarity, performance, and maintainability.",
+    "viewProjects": "View projects",
+    "getInTouch": "Get in touch"
+  },
+  "about": {
+    "title": "About me",
+    "heading": "Hi, I'm Filipe",
+    "intro": "I'm a developer focused on building clear, maintainable solutions. I care about user experience, performance, and clean architecture.",
+    "bio": "I've been working across the stack — from front-end interfaces to backend services — and I enjoy turning ideas into reliable products. When I'm not coding, I like to keep learning and exploring new tools and practices."
+  },
+  "experience": {
+    "title": "Experience",
+    "subtitle": "My career path and main roles.",
+    "experiences": [
+      {
+        "id": "1",
+        "role": "Senior Developer",
+        "company": "Company Name",
+        "period": "2022 – Present",
+        "description": "Leading features and improvements for web products. Working with React, TypeScript, and modern tooling. Collaborating with design and product to deliver accessible, performant UIs.",
+        "tags": ["React", "TypeScript", "Node.js"]
+      },
+      {
+        "id": "2",
+        "role": "Full Stack Developer",
+        "company": "Previous Company",
+        "period": "2020 – 2022",
+        "description": "Built and maintained customer-facing and internal applications. Contributed to APIs, databases, and front-end interfaces.",
+        "tags": ["JavaScript", "Python", "PostgreSQL"]
+      },
+      {
+        "id": "3",
+        "role": "Junior Developer",
+        "company": "First Company",
+        "period": "2018 – 2020",
+        "description": "Started my career building small features and fixing bugs. Learned best practices in version control, code review, and teamwork.",
+        "tags": ["HTML", "CSS", "JavaScript"]
+      }
+    ]
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "A selection of things I've built or contributed to.",
+    "liveDemo": "Live demo",
+    "repository": "Repository",
+    "list": [
+      {
+        "id": "1",
+        "title": "Project Alpha",
+        "description": "A web app that helps users manage tasks and collaborate. Built with React and a REST API.",
+        "href": "https://example.com",
+        "repo": "https://github.com/you/alpha",
+        "tags": ["React", "TypeScript", "Node.js"]
+      },
+      {
+        "id": "2",
+        "title": "Project Beta",
+        "description": "Dashboard for analytics and reporting. Real-time data and responsive layout.",
+        "href": "https://example.com",
+        "tags": ["React", "Tailwind", "REST"]
+      },
+      {
+        "id": "3",
+        "title": "Project Gamma",
+        "description": "Open-source CLI tool for local development workflows. Used by several teams internally.",
+        "repo": "https://github.com/you/gamma",
+        "tags": ["Node.js", "TypeScript", "CLI"]
+      }
+    ]
+  },
+  "skills": {
+    "title": "Skills",
+    "subtitle": "Technologies and tools I work with.",
+    "frontend": "Front-end",
+    "backend": "Back-end",
+    "tools": "Tools",
+    "other": "Other"
+  },
+  "contact": {
+    "title": "Get in touch",
+    "subtitle": "I'm open to new opportunities and conversations. Say hello.",
+    "emailMe": "Email me"
+  },
+  "footer": {
+    "rights": "All rights reserved."
+  },
+  "a11y": {
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "language": "Language"
+  }
+}

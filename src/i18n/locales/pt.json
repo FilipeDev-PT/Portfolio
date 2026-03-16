@@ -1,0 +1,102 @@
+{
+  "nav": {
+    "about": "Sobre",
+    "experience": "Experiência",
+    "projects": "Projetos",
+    "skills": "Competências",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "tagline": "Desenvolvedor e resolvedor de problemas",
+    "subtitle": "Construo aplicações web com foco em clareza, desempenho e manutenção.",
+    "viewProjects": "Ver projetos",
+    "getInTouch": "Contactar"
+  },
+  "about": {
+    "title": "Sobre mim",
+    "heading": "Olá, sou o Filipe",
+    "intro": "Sou desenvolvedor com foco em soluções claras e fáceis de manter. Preocupo-me com experiência do utilizador, desempenho e arquitetura limpa.",
+    "bio": "Trabalho em todo o stack — desde interfaces front-end a serviços de backend — e gosto de transformar ideias em produtos fiáveis. Quando não estou a programar, gosto de aprender e explorar novas ferramentas e práticas."
+  },
+  "experience": {
+    "title": "Experiência",
+    "subtitle": "O meu percurso e principais funções.",
+    "experiences": [
+      {
+        "id": "1",
+        "role": "Desenvolvedor Sénior",
+        "company": "Nome da Empresa",
+        "period": "2022 – Presente",
+        "description": "Liderar funcionalidades e melhorias em produtos web. Trabalho com React, TypeScript e ferramentas modernas. Colaboração com design e produto para entregar UIs acessíveis e performantes.",
+        "tags": ["React", "TypeScript", "Node.js"]
+      },
+      {
+        "id": "2",
+        "role": "Desenvolvedor Full Stack",
+        "company": "Empresa Anterior",
+        "period": "2020 – 2022",
+        "description": "Construção e manutenção de aplicações para clientes e internas. Contribuição para APIs, bases de dados e interfaces front-end.",
+        "tags": ["JavaScript", "Python", "PostgreSQL"]
+      },
+      {
+        "id": "3",
+        "role": "Desenvolvedor Júnior",
+        "company": "Primeira Empresa",
+        "period": "2018 – 2020",
+        "description": "Início de carreira a construir pequenas funcionalidades e a corrigir bugs. Aprendi boas práticas em controlo de versões, revisão de código e trabalho em equipa.",
+        "tags": ["HTML", "CSS", "JavaScript"]
+      }
+    ]
+  },
+  "projects": {
+    "title": "Projetos",
+    "subtitle": "Alguns projetos que construí ou aos quais contribuí.",
+    "liveDemo": "Demo",
+    "repository": "Repositório",
+    "list": [
+      {
+        "id": "1",
+        "title": "Projeto Alpha",
+        "description": "Aplicação web para gestão de tarefas e colaboração. Feito com React e API REST.",
+        "href": "https://example.com",
+        "repo": "https://github.com/you/alpha",
+        "tags": ["React", "TypeScript", "Node.js"]
+      },
+      {
+        "id": "2",
+        "title": "Projeto Beta",
+        "description": "Dashboard de análise e relatórios. Dados em tempo real e layout responsivo.",
+        "href": "https://example.com",
+        "tags": ["React", "Tailwind", "REST"]
+      },
+      {
+        "id": "3",
+        "title": "Projeto Gamma",
+        "description": "Ferramenta CLI open-source para fluxos de desenvolvimento local. Usada por várias equipas internamente.",
+        "repo": "https://github.com/you/gamma",
+        "tags": ["Node.js", "TypeScript", "CLI"]
+      }
+    ]
+  },
+  "skills": {
+    "title": "Competências",
+    "subtitle": "Tecnologias e ferramentas com que trabalho.",
+    "frontend": "Front-end",
+    "backend": "Back-end",
+    "tools": "Ferramentas",
+    "other": "Outro"
+  },
+  "contact": {
+    "title": "Contacto",
+    "subtitle": "Estou aberto a novas oportunidades e conversas. Diz olá.",
+    "emailMe": "Enviar email"
+  },
+  "footer": {
+    "rights": "Todos os direitos reservados."
+  },
+  "a11y": {
+    "openMenu": "Abrir menu",
+    "closeMenu": "Fechar menu",
+    "language": "Idioma"
+  }
+}
