@@ -49,14 +49,17 @@ npm run preview:gh   # build + preview (simulates GitHub Pages)
 
 The project is configured to run on **GitHub Pages** (including project sites like `https://<user>.github.io/<repo>/`).
 
-- **`base: './'`** in `vite.config.ts` makes asset URLs relative so JS/CSS load correctly on any base path.
+- **`base: '/Portfolio/'`** in `vite.config.ts` so assets load at `https://filipedev-pt.github.io/Portfolio/`.
 - **Workflow** `.github/workflows/deploy.yml`: on push to `main`, it builds and deploys the `dist/` folder to GitHub Pages.
 
-**Setup:**
+**Porque a página fica em branco:** Se Source for "Deploy from a branch" com pasta root, o GitHub serve o código-fonte; o browser tenta carregar ficheiros como `/src/main.tsx` em vez do bundle → página em branco. A solução é publicar o build (pasta `dist/`), o que o workflow faz.
 
-1. In the repo: **Settings → Pages**.
-2. Under **Build and deployment**, set **Source** to **GitHub Actions** (not “Deploy from a branch”).
-3. Push to `main`; the workflow will build and publish. The site will be at `https://<username>.github.io/<repo>/`.
+
+**Configuração:**
+
+1. No repo: **Settings → Pages**.
+2. Em **Build and deployment**, escolhe **Source** = **GitHub Actions** (not “Deploy from a branch”).
+3. Guarda. No próximo push para `main`, o workflow corre e o site fica em `https://filipedev-pt.github.io/Portfolio/`.
 
 If your default branch is `master` instead of `main`, change `branches: [main]` to `branches: [master]` in `.github/workflows/deploy.yml`.
 
