@@ -39,10 +39,26 @@ src/
 
 ```bash
 npm install
-npm run dev    # http://localhost:5173
-npm run build
-npm run preview
+npm run dev       # http://localhost:5173
+npm run build     # output in dist/
+npm run preview   # preview production build locally
+npm run preview:gh   # build + preview (simulates GitHub Pages)
 ```
+
+## GitHub Pages
+
+The project is configured to run on **GitHub Pages** (including project sites like `https://<user>.github.io/<repo>/`).
+
+- **`base: './'`** in `vite.config.ts` makes asset URLs relative so JS/CSS load correctly on any base path.
+- **Workflow** `.github/workflows/deploy.yml`: on push to `main`, it builds and deploys the `dist/` folder to GitHub Pages.
+
+**Setup:**
+
+1. In the repo: **Settings → Pages**.
+2. Under **Build and deployment**, set **Source** to **GitHub Actions** (not “Deploy from a branch”).
+3. Push to `main`; the workflow will build and publish. The site will be at `https://<username>.github.io/<repo>/`.
+
+If your default branch is `master` instead of `main`, change `branches: [main]` to `branches: [master]` in `.github/workflows/deploy.yml`.
 
 ## Visual identity
 
@@ -53,7 +69,7 @@ The design system and visual identity (colors, typography, spacing, components) 
 1. **Site info and skills** — Edit `src/data/content.ts`: `site` (name, email, LinkedIn, GitHub), `skills` list.
 2. **Translatable copy** — Edit `src/i18n/locales/en.json` and `pt.json`: nav, hero, about, experience (including experiences array), projects (including list), skills labels, contact, footer, a11y.
 3. **Styling** — Tailwind in components; accent in `src/index.css` (`--accent`).
-4. **Sections** — Add/remove in `App.tsx`, `src/hooks/useActiveSection.ts` (SECTION_IDS), and `src/components/Navbar.tsx` (NAV_IDS).
+4. **Sections** — Add/remove in `App.tsx` and `src/components/Navbar.tsx` (NAV_IDS).
 
 ## License
 
