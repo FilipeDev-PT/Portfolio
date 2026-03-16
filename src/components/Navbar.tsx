@@ -33,11 +33,18 @@ export function Navbar() {
         <button
           type="button"
           onClick={() => handleNavClick('hero')}
-          className={`font-display text-base font-semibold transition sm:text-lg ${
+          className={`flex items-center gap-2 font-display text-base font-semibold transition sm:text-lg ${
             active === 'hero' ? 'text-violet-600 dark:text-violet-400' : 'text-slate-900 hover:text-violet-600 dark:text-white dark:hover:text-violet-400'
           }`}
         >
-          {site.name}
+          <img
+            src={`${import.meta.env.BASE_URL}favicon.svg`}
+            alt=""
+            width={28}
+            height={27}
+            className="flex-shrink-0"
+          />
+          <span>{site.name}</span>
         </button>
         <ul className="hidden items-center gap-6 md:flex lg:gap-8">
           {NAV_IDS.map((id) => (

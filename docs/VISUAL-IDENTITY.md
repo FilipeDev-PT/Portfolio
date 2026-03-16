@@ -258,13 +258,22 @@ Touch target:  min-h-[44px]
 
 ---
 
-## 12. Ficheiros de implementação
+## 12. Logo
+
+- **Marca:** Utiliza-se o **favicon** do projeto como logo (navbar e separador do browser).
+- **Ficheiro:** `public/favicon.svg`. Incluído na navbar via `import.meta.env.BASE_URL + 'favicon.svg'` para funcionar com base path (ex.: GitHub Pages).
+- **Tamanho na navbar:** 28×27 px (proporção do SVG original). Não distorcer.
+
+---
+
+## 13. Ficheiros de implementação
 
 | Recurso           | Ficheiro(s) |
 |-------------------|-------------|
 | Variáveis de cor  | `src/index.css` |
 | Tailwind theme    | `tailwind.config.js` |
 | Fontes            | `index.html` (link Google Fonts) |
+| Logo / favicon    | `public/favicon.svg` |
 | Componentes       | `src/components/*`, `src/sections/*` |
 
 Qualquer alteração à identidade visual deve ser refletida neste documento e, quando possível, nos tokens (CSS e Tailwind) para manter uma única fonte de verdade.

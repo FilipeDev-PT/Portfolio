@@ -2,9 +2,9 @@ import path from 'path'
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// GitHub Pages serves from https://<user>.github.io/<repo>/ so assets must use relative paths
+// GitHub Pages: https://filipedev-pt.github.io/Portfolio/
 export default defineConfig({
-  base: './',
+  base: '/Portfolio/',
   plugins: [react()],
   resolve: {
     alias: { '@': path.resolve(__dirname, './src') },
