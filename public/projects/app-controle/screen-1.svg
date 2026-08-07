@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-label="App Controle screenshot 1">
+  <rect width="1280" height="720" fill="#020617"/>
+  <rect x="48" y="48" width="1184" height="624" rx="16" fill="#0f172a" stroke="#334155" stroke-width="2"/>
+  <rect x="80" y="120" width="260" height="480" rx="12" fill="#1e293b"/>
+  <rect x="360" y="120" width="840" height="220" rx="12" fill="#1e293b"/>
+  <rect x="360" y="360" width="840" height="240" rx="12" fill="#312e81"/>
+  <text x="640" y="680" fill="#64748b" font-family="system-ui,sans-serif" font-size="24" text-anchor="middle">App Controle  Screenshot 1</text>
+</svg>

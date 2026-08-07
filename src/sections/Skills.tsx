@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { Section } from '@/components/Section'
 import { skills } from '@/data/content'
 
-const CATEGORY_KEYS = ['frontend', 'backend', 'tools', 'other'] as const
+const CATEGORY_KEYS = ['frontend', 'backend', 'tools', 'QA', 'other'] as const
 
 export function Skills() {
   const { t } = useTranslation()

@@ -51,38 +51,26 @@
   "projects": {
     "title": "Projetos",
     "subtitle": "Alguns projetos que construí ou aos quais contribuí.",
+    "viewDetails": "Ver detalhes",
+    "repository": "Repositório"
+  },
+  "projectDetail": {
+    "backToProjects": "Voltar aos projetos",
+    "screenshots": "Capturas de ecrã",
+    "aboutProject": "Sobre o projeto",
     "liveDemo": "Demo",
     "repository": "Repositório",
-    "list": [
-      {
-        "id": "1",
-        "title": "Projeto Alpha",
-        "description": "Aplicação web para gestão de tarefas e colaboração. Feito com React e API REST.",
-        "href": "https://example.com",
-        "repo": "https://github.com/you/alpha",
-        "tags": ["React", "TypeScript", "Node.js"]
-      },
-      {
-        "id": "2",
-        "title": "Projeto Beta",
-        "description": "Dashboard de análise e relatórios. Dados em tempo real e layout responsivo.",
-        "href": "https://example.com",
-        "tags": ["React", "Tailwind", "REST"]
-      },
-      {
-        "id": "3",
-        "title": "Projeto Gamma",
-        "description": "Ferramenta CLI open-source para fluxos de desenvolvimento local. Usada por várias equipas internamente.",
-        "repo": "https://github.com/you/gamma",
-        "tags": ["Node.js", "TypeScript", "CLI"]
-      }
-    ]
+    "previousScreenshot": "Captura anterior",
+    "nextScreenshot": "Próxima captura",
+    "goToScreenshot": "Ir para a captura {{number}}",
+    "screenshot": "captura {{current}} de {{total}}"
   },
   "skills": {
     "title": "Competências",
     "subtitle": "Tecnologias e ferramentas com que trabalho.",
     "frontend": "Front-end",
     "backend": "Back-end",
+    "QA": "Quality Assurance",
     "tools": "Ferramentas",
     "other": "Outro"
   },

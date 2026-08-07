@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import type { SectionId } from '@/types'
@@ -13,13 +14,22 @@ function scrollToSection(id: SectionId) {
 
 export function Navbar() {
   const { t } = useTranslation()
+  const navigate = useNavigate()
+  const location = useLocation()
+  const isHome = location.pathname === '/'
   const [active, setActive] = useState<SectionId>('hero')
   const [mobileOpen, setMobileOpen] = useState(false)
 
   function handleNavClick(id: SectionId) {
-    scrollToSection(id)
     setMobileOpen(false)
     setActive(id)
+
+    if (isHome) {
+      scrollToSection(id)
+      return
+    }
+
+    navigate('/', { state: { scrollTo: id } })
   }
 
   return (
@@ -30,11 +40,14 @@ export function Navbar() {
       className="fixed top-0 left-0 right-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur-md dark:border-white/10 dark:bg-slate-950/90"
     >
       <nav className="mx-auto flex max-w-5xl items-center justify-between gap-2 px-4 py-3 sm:px-6 sm:py-4" aria-label="Main navigation">
-        <button
-          type="button"
-          onClick={() => handleNavClick('hero')}
+        <Link
+          to="/"
+          onClick={() => {
+            setMobileOpen(false)
+            setActive('hero')
+          }}
           className={`flex items-center gap-2 font-display text-base font-semibold transition sm:text-lg ${
-            active === 'hero' ? 'text-violet-600 dark:text-violet-400' : 'text-slate-900 hover:text-violet-600 dark:text-white dark:hover:text-violet-400'
+            active === 'hero' && isHome ? 'text-violet-600 dark:text-violet-400' : 'text-slate-900 hover:text-violet-600 dark:text-white dark:hover:text-violet-400'
           }`}
         >
           <img
@@ -45,7 +58,7 @@ export function Navbar() {
             className="flex-shrink-0"
           />
           <span>{site.name}</span>
-        </button>
+        </Link>
         <ul className="hidden items-center gap-6 md:flex lg:gap-8">
           {NAV_IDS.map((id) => (
             <li key={id}>
@@ -53,7 +66,7 @@ export function Navbar() {
                 type="button"
                 onClick={() => handleNavClick(id)}
                 className={`text-sm font-medium transition hover:text-violet-600 dark:hover:text-violet-400 ${
-                  active === id ? 'text-violet-600 dark:text-violet-400' : 'text-slate-600 dark:text-slate-300'
+                  active === id && isHome ? 'text-violet-600 dark:text-violet-400' : 'text-slate-600 dark:text-slate-300'
                 }`}
               >
                 {t(`nav.${id}`)}
@@ -98,7 +111,7 @@ export function Navbar() {
                     type="button"
                     onClick={() => handleNavClick(id)}
                     className={`block w-full rounded-lg px-4 py-3 text-left text-sm font-medium transition hover:bg-slate-100 dark:hover:bg-slate-800 ${
-                      active === id ? 'text-violet-600 dark:text-violet-400' : 'text-slate-700 dark:text-slate-300'
+                      active === id && isHome ? 'text-violet-600 dark:text-violet-400' : 'text-slate-700 dark:text-slate-300'
                     }`}
                   >
                     {t(`nav.${id}`)}

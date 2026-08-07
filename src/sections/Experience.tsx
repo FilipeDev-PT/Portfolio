@@ -1,19 +1,11 @@
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import { Section } from '@/components/Section'
-
-interface ExpItem {
-  id: string
-  role: string
-  company: string
-  period: string
-  description: string
-  tags: string[]
-}
+import type { Experience } from '@/types'
+import { experiences } from '@/data/content'
 
 export function Experience() {
   const { t } = useTranslation()
-  const experiences = t('experience.experiences', { returnObjects: true }) as ExpItem[]
 
   return (
     <Section id="experience">
@@ -30,7 +22,7 @@ export function Experience() {
       </p>
       <ul className="mt-8 space-y-8 sm:mt-10 sm:space-y-10">
         {Array.isArray(experiences) &&
-          experiences.map((exp: ExpItem, i: number) => (
+          experiences.map((exp: Experience, i: number) => (
             <motion.li
               key={exp.id}
               initial={{ opacity: 0, x: -16 }}

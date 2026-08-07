@@ -9,17 +9,19 @@ export interface Experience {
 
 export interface Project {
   id: string
+  slug: string
   title: string
   description: string
-  href?: string
+  details: string
+  screenshots: string[]
   repo?: string
-  image?: string
+  liveUrl?: string
   tags: string[]
 }
 
 export interface Skill {
   name: string
-  category: 'frontend' | 'backend' | 'tools' | 'other'
+  category: 'frontend' | 'backend' | 'tools' | 'QA' | 'other'
 }
 
 export type SectionId = 'hero' | 'about' | 'experience' | 'projects' | 'skills' | 'contact'
