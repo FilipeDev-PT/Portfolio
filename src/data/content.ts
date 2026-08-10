@@ -342,8 +342,9 @@ Além do desenvolvimento, participei ativamente das atividades relacionadas à q
 - Scrum
 `,
     screenshots: [
-      'projects/obrify/screen-1.svg',
-      'projects/obrify/screen-2.svg',
+      'projects/obrify/screen-1-o.svg',
+      'projects/obrify/screen-2-o.svg',
+      'projects/obrify/screen-3-o.svg',
     ],
     repo: 'https://github.com/you/gamma',
     tags: ['React', 'TypeScript', 'Tailwind', 'C#', 'SQL'],
