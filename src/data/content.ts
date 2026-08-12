@@ -3,9 +3,9 @@ import type { Experience, Project, Skill } from '@/types'
 export const site = {
   name: 'Filipe Cristovam',
   tagline: 'Developer & problem solver',
-  email: 'hello@example.com',
-  linkedIn: 'https://linkedin.com/in/yourprofile',
-  github: 'https://github.com/yourusername',
+  email: 'filipe.dev.contact@gmail.com',
+  linkedIn: 'https://www.linkedin.com/in/filipe-cristovam-6b5b7031a/',
+  github: 'https://github.com/FilipeDev-PT',
 } as const
 
 export const about = {
