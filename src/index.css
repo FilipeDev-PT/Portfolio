@@ -1,26 +1,119 @@
+@font-face {
+  font-family: 'Geist Variable';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url('@fontsource-variable/geist/files/geist-latin-wght-normal.woff2') format('woff2-variations');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Fraunces Variable';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url('@fontsource-variable/fraunces/files/fraunces-latin-wght-normal.woff2') format('woff2-variations');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --accent: #8b5cf6;
-  --accent-muted: rgba(139, 92, 246, 0.15);
+@layer base {
+  :root {
+    --background: 40 36% 95%;
+    --foreground: 0 0% 9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 9%;
+    --primary: 227 100% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 15 54% 54%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 40 24% 91%;
+    --muted-foreground: 37 7% 37%;
+    --accent: 15 54% 54%;
+    --accent-foreground: 0 0% 100%;
+    --border: 39 20% 83%;
+    --input: 39 20% 83%;
+    --ring: 227 100% 50%;
+    --destructive: 8 72% 38%;
+    --destructive-foreground: 0 0% 100%;
+    --radius: 0.5rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    background-color: hsl(var(--background));
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    margin: 0;
+    overflow-x: hidden;
+    font-size: 1.0625rem;
+    line-height: 1.62;
+  }
+
+  #root {
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: hsl(var(--primary) / 0.18);
+  }
+
+  :focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 3px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    .animate-sheet-in,
+    .animate-sheet-out,
+    .animate-overlay-in,
+    .animate-overlay-out {
+      animation: none;
+    }
+  }
 }
 
-html {
-  scroll-behavior: smooth;
-  background-color: #020617; /* slate-950 */
-}
+@layer components {
+  .skip-link {
+    @apply absolute left-4 z-[100] rounded-md bg-foreground px-4 py-2.5 text-sm font-medium text-background;
+    top: -100%;
+  }
 
-body {
-  margin: 0;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: inherit;
-}
+  .skip-link:focus {
+    top: 1rem;
+  }
 
-#root {
-  min-height: 100vh;
-  overflow-x: hidden;
+  .cta-motion {
+    transition:
+      transform 180ms ease,
+      background-color 180ms ease,
+      border-color 180ms ease,
+      color 180ms ease,
+      box-shadow 180ms ease;
+  }
+
+  @media (hover: hover) and (prefers-reduced-motion: no-preference) {
+    .cta-motion:hover {
+      transform: translateY(-2px);
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .cta-motion:active {
+      transform: scale(0.98);
+    }
+  }
 }
