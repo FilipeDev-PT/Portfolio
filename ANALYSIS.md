@@ -10,7 +10,7 @@ Análise feita para verificar conformidade com boas práticas e padrões. Ajuste
 |------|--------|--------|
 | Estrutura de pastas | ✅ | `components/`, `sections/`, `hooks/`, `data/`, `types/`, `i18n/` — separação clara por responsabilidade |
 | Path alias `@/` | ✅ | Configurado em `vite.config.ts` e `tsconfig.app.json` |
-| Single-page com secções | ✅ | Navegação por âncoras (`#about`, `#projects`, etc.) e scroll suave |
+| Single-page com seções | ✅ | Navegação por âncoras (`#about`, `#projects`, etc.) e scroll suave |
 | Dados vs. UI | ✅ | Conteúdo traduzível em `i18n/locales`; `data/content.ts` só para `site` (nome, email, links) e lista de `skills` |
 
 ---
@@ -20,7 +20,7 @@ Análise feita para verificar conformidade com boas práticas e padrões. Ajuste
 | Pacote | Uso | Ação |
 |--------|-----|------|
 | react, react-dom | ✅ | Core |
-| framer-motion | ✅ | Animações (Hero, secções, menu mobile) |
+| framer-motion | ✅ | Animações (Hero, seções, menu mobile) |
 | i18next, react-i18next | ✅ | i18n EN/PT |
 | ~~next-themes~~ | ❌ | Removido — lógica de tema foi retirada |
 | ~~react-router-dom~~ | ❌ | Removido — SPA com âncoras, sem rotas |
@@ -61,14 +61,14 @@ Nenhuma dependência órfã restante.
 - **Config:** namespace `translation`, recursos `en` e `pt` com estrutura correta. ✅
 - **Persistência:** idioma em `localStorage` (`portfolio-lang`). ✅
 - **Chave morta:** `a11y.themeToggle` removida dos locales após remoção do botão de tema. ✅
-- **Uso:** `useTranslation()` e `t()` nas secções e na Navbar; listas (experiences, projects) via `returnObjects: true`. ✅
+- **Uso:** `useTranslation()` e `t()` nas seções e na Navbar; listas (experiences, projects) via `returnObjects: true`. ✅
 
 ---
 
 ## 6. Componentes
 
 - **Navbar**
-  - Navegação por secções, menu mobile com AnimatePresence, destaque da secção ativa (`useActiveSection`). ✅
+  - Navegação por seções, menu mobile com AnimatePresence, destaque da seção ativa (`useActiveSection`). ✅
   - Sem referências a tema. ✅
 
 - **Section**
@@ -100,7 +100,7 @@ Nenhuma dependência órfã restante.
 
 ## 9. Hooks e tipos
 
-- **useActiveSection:** IntersectionObserver, array `SECTION_IDS` alinhado com as secções. ✅
+- **useActiveSection:** IntersectionObserver, array `SECTION_IDS` alinhado com as seções. ✅
 - **types/index.ts:** `Experience`, `Project`, `Skill`, `SectionId` exportados e usados. ✅
 
 ---
@@ -125,7 +125,7 @@ Nenhuma dependência órfã restante.
 
 ## 12. Sugestões opcioniais (não aplicadas)
 
-- **README:** atualizar para referir i18n (EN/PT) e que experiências/projetos vêm dos ficheiros em `src/i18n/locales/`.
+- **README:** atualizar para referir i18n (EN/PT) e que experiências/projetos vêm dos arquivos em `src/i18n/locales/`.
 - **Tailwind:** remover `darkMode: 'class'` se no futuro se simplificarem os estilos apenas para escuro (sem variantes `dark:`).
 - **Limpeza de classes:** remover variantes de modo claro (ex.: `bg-slate-50`, `text-slate-700`) dos componentes se quiser menos CSS e markup mais simples.
 

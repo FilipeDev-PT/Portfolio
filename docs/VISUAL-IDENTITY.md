@@ -9,7 +9,7 @@ Fonte de verdade para cor, tipo, espaço e movimento após o redesign editorial.
 Motivos recorrentes (apenas estes):
 
 1. Índices em Fraunces (`01`, `02`…)
-2. Labels em monoespaco, uppercase, tracking largo
+2. Labels em monoespaçado, uppercase, tracking largo
 
 ## Tokens (não usar HEX nos componentes)
 
@@ -40,4 +40,4 @@ Hierarquia: `text-display` (H1), `text-h2` (H2), 1.25–1.75rem (H3), body ~1.06
 
 ## Layout
 
-Container `max-w-page` (72rem). Navbar sticky. Homepage: Hero → Trabalho → Experiência → Sobre (stack) → Contacto.
+Container `max-w-page` (72rem). Navbar sticky. Homepage: Hero → Trabalho → Experiência → Sobre (stack) → Contato.

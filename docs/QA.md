@@ -1,6 +1,6 @@
 # QA — Portfólio Filipe Cristovam
 
-Tarefas curtas para validar se o site cumpre o trabalho de um portfolio: clareza, prova, contacto e acesso.
+Tarefas curtas para validar se o site cumpre o trabalho de um portfolio: clareza, prova, contato e acesso.
 
 ## Tarefas de usabilidade
 
@@ -14,7 +14,7 @@ Tarefas curtas para validar se o site cumpre o trabalho de um portfolio: clareza
 
 **Instrução:** Encontre um trabalho que demonstre bem as capacidades desta pessoa.
 
-**Esperado:** Chegar a Obrify ou Vize Conecta (screenshots reais, papel e resultado) sem passar por secções secundárias primeiro.
+**Esperado:** Chegar a Obrify ou Vize Conecta (screenshots reais, papel e resultado) sem passar por seções secundárias primeiro.
 
 ### C. Case
 
@@ -22,17 +22,17 @@ Tarefas curtas para validar se o site cumpre o trabalho de um portfolio: clareza
 
 **Esperado:** Abrir um case. Conseguir citar contexto, papel (full-stack) e resultado a partir do texto existente — sem métricas inventadas. App Controle tem menos detalhe; isso é intencional.
 
-### D. Contacto
+### D. Contato
 
 **Instrução:** Você deseja conversar com esta pessoa sobre um trabalho. Faça o que faria.
 
-**Esperado:** Usar o formulário (nome, email, mensagem) ou `filipe.dev.contact@gmail.com` / LinkedIn. O envio abre o cliente de email; não há backend.
+**Esperado:** Usar o formulário (nome, e-mail, mensagem) ou `filipe.dev.contact@gmail.com` / LinkedIn. O envio abre o cliente de e-mail; não há backend.
 
 ### E. Acessibilidade
 
 **Instrução:** Navegue pelos elementos principais somente com teclado; depois avalie o site com preferência de reduced motion.
 
-**Esperado:** Skip link visível no primeiro Tab; ordem header → main → footer; anel de foco visível; Sheet fecha com Escape e devolve o foco; reduced motion remove parallax e deslocamentos grandes, sem esconder conteúdo.
+**Esperado:** Skip link visível no primeiro Tab; ordem header → main → footer; anel de foco visível; Sheet fecha com Escape e retorna o foco; reduced motion remove parallax e deslocamentos grandes, sem esconder conteúdo.
 
 ## Métricas a acompanhar
 
@@ -41,17 +41,17 @@ Não há analytics instalado. `track()` emite eventos via `gtag` **se** o GA4 fo
 | Métrica | Como |
 |---|---|
 | Tempo médio de engagement | GA4 / Search Console, depois de existir medição |
-| Taxa de conversão de contacto | `contact_submit` + `email_click` / sessões |
+| Taxa de conversão de contato | `contact_submit` + `email_click` / sessões |
 | Engagement de projetos | `case_open` + `project_view` |
-| Cliques no CTA de contacto | `contact_cta_click` |
-| Conclusão das tarefas A–E | Notas deste guião (pass / fail + obstáculos) |
-| Erros observados | Consola, 404 de rotas, falhas de formulário |
+| Cliques no CTA de contato | `contact_cta_click` |
+| Conclusão das tarefas A–E | Notas deste guia (pass / fail + obstáculos) |
+| Erros observados | Console, 404 de rotas, falhas de formulário |
 | Core Web Vitals | LCP ≤ 2.5s, INP ≤ 200ms, CLS ≤ 0.1 (CrUX / Lighthouse p75) |
 | NPS | Apenas complementar, depois de conversas reais |
 
 ## Limitações conhecidas
 
-- Sem servidor de email: o formulário usa `mailto:`.
+- Sem servidor de e-mail: o formulário usa `mailto:`.
 - App Controle e Vize Chat têm menos prova visual (SVG) do que Vize Conecta e Obrify (PNG).
-- Experiências em Vize e FGR partilham a mesma descrição factual — não foi inventado detalhe extra.
+- Experiências em Vize e FGR compartilham a mesma descrição factual — não foi inventado detalhe extra.
 - Sem Playwright/Cypress neste repositório.
