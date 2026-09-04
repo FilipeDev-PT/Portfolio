@@ -1,117 +1,121 @@
+import { useEffect } from 'react'
 import { Link, Navigate, useParams } from 'react-router-dom'
-import { motion } from 'framer-motion'
+import { ArrowLeft } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
-import { ImageCarousel } from '@/components/ImageCarousel'
-import { getProjectBySlug } from '@/data/content'
 import ReactMarkdown from 'react-markdown'
-
+import { ImageCarousel } from '@/components/ImageCarousel'
+import { Badge } from '@/components/ui/badge'
+import { getCaseBody } from '@/data/cases'
+import { getProjectBySlug } from '@/data/content'
+import { track } from '@/lib/analytics'
 
 export function ProjectDetail() {
   const { slug } = useParams<{ slug: string }>()
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const project = slug ? getProjectBySlug(slug) : undefined
+
+  useEffect(() => {
+    if (project) track('project_view', { project: project.slug })
+  }, [project])
 
   if (!project) {
     return <Navigate to="/" replace />
   }
 
+  const details = getCaseBody(project.slug, i18n.language)
+  const role = t(`projects.items.${project.id}.role`)
+  const description = t(`projects.items.${project.id}.description`)
+
   return (
-    <section className="scroll-mt-16 py-12 sm:scroll-mt-20 sm:py-16 md:py-24">
-      <div className="mx-auto max-w-5xl px-4 sm:px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4 }}
-        >
-          <Link
-            to="/"
-            state={{ scrollTo: 'projects' }}
-            className="inline-flex min-h-[44px] items-center gap-2 text-sm font-medium text-violet-600 transition hover:underline focus:outline-none focus:ring-2 focus:ring-violet-400 focus:ring-offset-2 dark:text-violet-400 dark:focus:ring-offset-slate-950"
-          >
-            <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-            </svg>
-            {t('projectDetail.backToProjects')}
-          </Link>
+    <article className="mx-auto max-w-page px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+      <Link
+        to="/"
+        state={{ scrollTo: 'projects' }}
+        className="inline-flex min-h-11 items-center gap-2 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+      >
+        <ArrowLeft className="h-4 w-4" />
+        {t('projectDetail.backToProjects')}
+      </Link>
 
-          <h1 className="mt-6 font-display text-2xl font-semibold text-slate-900 dark:text-white sm:text-3xl md:text-4xl">
-            {project.title}
-          </h1>
-          <p className="mt-3 max-w-3xl text-sm text-slate-600 dark:text-slate-400 sm:text-base">
-            {project.description}
+      <header className="mt-10 max-w-3xl">
+        <p className="font-mono text-[0.6875rem] uppercase tracking-[0.22em] text-muted-foreground">
+          {t('projects.kicker')}
+        </p>
+        <h1 className="mt-3 font-serif text-display font-medium text-foreground">{project.title}</h1>
+        <p className="mt-5 text-[1.125rem] leading-relaxed text-muted-foreground">{description}</p>
+        {role ? (
+          <p className="mt-6 text-sm">
+            <span className="font-mono text-[0.6875rem] uppercase tracking-[0.18em] text-muted-foreground">
+              {t('projectDetail.roleLabel')}
+            </span>
+            <span className="mt-1 block text-foreground">{role}</span>
           </p>
+        ) : null}
+        <ul className="mt-6 flex flex-wrap gap-1.5">
+          {project.tags.map((tag) => (
+            <li key={tag}>
+              <Badge>{tag}</Badge>
+            </li>
+          ))}
+        </ul>
+      </header>
 
-          <div className="mt-4 flex flex-wrap gap-1.5 sm:gap-2">
-            {project.tags.map((tag) => (
-              <span
-                key={tag}
-                className="rounded bg-slate-200 px-2 py-0.5 text-xs text-slate-700 dark:bg-slate-800 dark:text-slate-300"
-              >
-                {tag}
-              </span>
-            ))}
+      {project.screenshots.length > 0 ? (
+        <section className="mt-12 sm:mt-16">
+          <h2 className="font-mono text-[0.6875rem] uppercase tracking-[0.22em] text-muted-foreground">
+            {t('projectDetail.screenshots')}
+          </h2>
+          <div className="mt-4">
+            <ImageCarousel images={project.screenshots} alt={project.title} />
           </div>
+        </section>
+      ) : null}
 
-          <div className="mt-8 sm:mt-10">
-            <h2 className="font-display text-lg font-semibold text-slate-900 dark:text-white sm:text-xl">
-              {t('projectDetail.screenshots')}
-            </h2>
-            <div className="mt-4">
-              <ImageCarousel images={project.screenshots} alt={project.title} />
-            </div>
-          </div>
+      <section className="mt-12 max-w-2xl sm:mt-16">
+        <h2 className="font-mono text-[0.6875rem] uppercase tracking-[0.22em] text-muted-foreground">
+          {t('projectDetail.aboutProject')}
+        </h2>
+        <div className="prose prose-neutral mt-6 max-w-none prose-headings:font-serif prose-headings:font-medium prose-headings:tracking-tight prose-headings:text-foreground prose-p:text-muted-foreground prose-li:text-muted-foreground prose-strong:text-foreground">
+          <ReactMarkdown
+            components={{
+              h2: ({ children }) => (
+                <h3 className="mb-2 mt-10 font-serif text-2xl text-foreground first:mt-0">{children}</h3>
+              ),
+              h3: ({ children }) => (
+                <h4 className="mb-2 mt-6 text-lg font-medium text-foreground">{children}</h4>
+              ),
+              hr: () => <hr className="my-8 border-border" />,
+            }}
+          >
+            {details}
+          </ReactMarkdown>
+        </div>
+      </section>
 
-          <div className="mt-8 sm:mt-10">
-            <h2 className="font-display text-lg font-semibold text-slate-900 dark:text-white sm:text-xl">
-              {t('projectDetail.aboutProject')}
-            </h2>
-            <ReactMarkdown
-              components={{
-                hr: (props) => (
-                  <hr {...props} className="my-4 border-slate-500" />
-                ),
-                h2: ({ children, ...props }) => (
-                  <h2 {...props} className="mt-4 mb-1">
-                    {children}
-                  </h2>
-                ),
-                h3: ({ children, ...props }) => (
-                  <h3 {...props} className="mt-3">
-                    {children}
-                  </h3>
-                ),
-              }}
+      {(project.liveUrl || project.repo) && (
+        <div className="mt-12 flex flex-wrap gap-3">
+          {project.liveUrl ? (
+            <a
+              href={project.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cta-motion inline-flex min-h-11 items-center rounded-md bg-primary px-5 text-sm font-medium text-primary-foreground"
             >
-              {project.details}
-            </ReactMarkdown>
-          </div>
-
-          {(project.liveUrl || project.repo) && (
-            <div className="mt-8 flex flex-wrap gap-3 sm:mt-10 sm:gap-4">
-              {project.liveUrl && (
-                <a
-                  href={project.liveUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex min-h-[44px] items-center rounded-lg bg-violet-600 px-4 py-2 text-sm font-medium text-white transition hover:bg-violet-500 focus:outline-none focus:ring-2 focus:ring-violet-400 focus:ring-offset-2 dark:focus:ring-offset-slate-950"
-                >
-                  {t('projectDetail.liveDemo')}
-                </a>
-              )}
-              {project.repo && (
-                <a
-                  href={project.repo}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex min-h-[44px] items-center rounded-lg border border-slate-200 px-4 py-2 text-sm font-medium text-violet-600 transition hover:border-violet-300 hover:bg-violet-50 focus:outline-none focus:ring-2 focus:ring-violet-400 focus:ring-offset-2 dark:border-slate-700 dark:text-violet-400 dark:hover:border-violet-500 dark:hover:bg-violet-500/10 dark:focus:ring-offset-slate-950"
-                >
-                  {t('projectDetail.repository')}
-                </a>
-              )}
-            </div>
-          )}
-        </motion.div>
-      </div>
-    </section>
+              {t('projectDetail.liveDemo')}
+            </a>
+          ) : null}
+          {project.repo ? (
+            <a
+              href={project.repo}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cta-motion inline-flex min-h-11 items-center rounded-md border border-border px-5 text-sm font-medium"
+            >
+              {t('projectDetail.repository')}
+            </a>
+          ) : null}
+        </div>
+      )}
+    </article>
   )
 }
