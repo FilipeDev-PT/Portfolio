@@ -1,0 +1,121 @@
+{
+  "nav": {
+    "projects": "Trabalho",
+    "experience": "Experiência",
+    "about": "Sobre",
+    "contact": "Contato",
+    "menu": "Menu"
+  },
+  "a11y": {
+    "skip": "Pular para o conteúdo",
+    "openMenu": "Abrir menu",
+    "closeMenu": "Fechar menu",
+    "language": "Idioma",
+    "mainNav": "Principal"
+  },
+  "hero": {
+    "kicker": "Desenvolvedor full-stack",
+    "subtitle": "Eu construo plataformas React e C# para equipes de operações — gestão de obras, atendimento omnichannel e ferramentas internas.",
+    "viewProjects": "Trabalho selecionado",
+    "getInTouch": "Contato"
+  },
+  "projects": {
+    "kicker": "Trabalho selecionado",
+    "title": "Plataformas que eu entreguei",
+    "subtitle": "Operações de obra, atendimento omnichannel e ferramentas internas — React e TypeScript no front, C# e SQL por trás.",
+    "viewCase": "Ver case",
+    "roleLabel": "Atuação",
+    "outcomeLabel": "Resultado",
+    "items": {
+      "vize-conecta": {
+        "description": "Um SuperApp de construção que centraliza fluxos, comunicação e processos operacionais para equipes de engenharia.",
+        "role": "Desenvolvedor full stack — interfaces, APIs REST e integrações.",
+        "outcome": "Evolução contínua da plataforma, integrações entre serviços e QA ao longo da entrega."
+      },
+      "obrify": {
+        "description": "Plataforma multi-tenant de campo para construção: planejamento, execução, custos, qualidade e dashboards.",
+        "role": "Desenvolvedor full stack — arquitetura em camadas, JWT/MFA, sync com ERP e módulos de produto.",
+        "outcome": "Programação semanal, mapas sinópticos, dashboards operacionais e integração assíncrona com ERP."
+      },
+      "vize-chat": {
+        "description": "Plataforma omnichannel que reúne WhatsApp, chat web e outros canais em uma única interface de atendimento.",
+        "role": "Desenvolvedor full stack — UI, APIs, integrações de mensageria e automação.",
+        "outcome": "Integrações em tempo real entre canais e práticas de qualidade do refinamento até a produção."
+      },
+      "app-controle": {
+        "description": "Plataforma de construção para acompanhamento de projetos, contratos e fluxos operacionais.",
+        "role": "",
+        "outcome": "Uma visão centralizada de projetos, contratos e indicadores operacionais."
+      }
+    }
+  },
+  "projectDetail": {
+    "backToProjects": "Voltar ao trabalho",
+    "screenshots": "Produto",
+    "aboutProject": "Case",
+    "liveDemo": "Demo",
+    "repository": "Repositório",
+    "previousScreenshot": "Screenshot anterior",
+    "nextScreenshot": "Próximo screenshot",
+    "goToScreenshot": "Ir para o screenshot {{number}}",
+    "screenshot": "screenshot {{current}} de {{total}}",
+    "roleLabel": "Atuação",
+    "stackLabel": "Stack"
+  },
+  "experience": {
+    "kicker": "Experiência",
+    "title": "Onde eu trabalho",
+    "subtitle": "Trabalho full-stack em produtos React e C#, inclusive em cargos paralelos.",
+    "items": {
+      "vize": {
+        "role": "Fullstack Developer",
+        "period": "maio 2025 – agosto 2026",
+        "description": "Desenvolvimento e manutenção de aplicações web com React e C#."
+      },
+      "fgr": {
+        "role": "Engineering Assistant",
+        "period": "agosto 2023 – fevereiro 2026",
+        "description": "Desenvolvimento e manutenção de aplicações web com React e C#."
+      }
+    }
+  },
+  "about": {
+    "kicker": "Sobre",
+    "title": "Como eu trabalho",
+    "heading": "Olá, eu sou o Filipe.",
+    "intro": "Sou desenvolvedor full-stack. A maior parte do meu trabalho recente é React e TypeScript no front-end, C# e SQL no back-end, e QA no mesmo ciclo de entrega — não como uma fase separada.",
+    "bio": "Venho construindo e mantendo plataformas usadas por equipes de operações e engenharia: SuperApps de construção, atendimento omnichannel e ferramentas internas. Me interessa uma interface que aguenta produção, APIs que continuam integráveis e testes que pegam o que ia ser publicado."
+  },
+  "skills": {
+    "title": "Stack que eu uso",
+    "frontend": "Front-end",
+    "backend": "Back-end",
+    "QA": "Qualidade",
+    "tools": "Ferramentas",
+    "other": "Outro"
+  },
+  "contact": {
+    "kicker": "Contato",
+    "title": "Vamos conversar",
+    "subtitle": "Aberto a novas oportunidades e a perguntas objetivas sobre um produto. O e-mail é o canal mais confiável.",
+    "emailMe": "Enviar e-mail",
+    "formName": "Nome",
+    "formEmail": "E-mail",
+    "formMessage": "Mensagem",
+    "formNamePlaceholder": "Seu nome",
+    "formEmailPlaceholder": "voce@empresa.com",
+    "formMessagePlaceholder": "O que você está construindo e do que precisa.",
+    "formRequired": "Obrigatório",
+    "formSubmit": "Enviar mensagem",
+    "formSending": "Enviando…",
+    "formSuccess": "O cliente de e-mail deve abrir com a mensagem pronta. Se não abrir, escreva para {{email}}.",
+    "formErrorGeneric": "A mensagem não foi enviada. Confira os campos abaixo.",
+    "errorName": "Digite seu nome (pelo menos 2 caracteres).",
+    "errorEmail": "Informe um e-mail válido.",
+    "errorMessage": "Escreva uma mensagem (pelo menos 10 caracteres).",
+    "elsewhere": "Também"
+  },
+  "footer": {
+    "rights": "Todos os direitos reservados."
+  }
+}

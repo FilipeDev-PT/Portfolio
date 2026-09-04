@@ -3,12 +3,12 @@ import { cn } from '@/lib/utils'
 
 const LANGS = [
   { code: 'en', label: 'EN' },
-  { code: 'pt', label: 'PT' },
+  { code: 'pt-BR', label: 'BR' },
 ] as const
 
 export function LanguageSwitcher() {
   const { i18n, t } = useTranslation()
-  const current = i18n.language.startsWith('pt') ? 'pt' : 'en'
+  const current = i18n.language.toLowerCase().startsWith('pt') ? 'pt-BR' : 'en'
 
   return (
     <div
@@ -22,7 +22,7 @@ export function LanguageSwitcher() {
           <button
             key={code}
             type="button"
-            onClick={() => i18n.changeLanguage(code)}
+            onClick={() => void i18n.changeLanguage(code)}
             aria-pressed={active}
             className={cn(
               'min-h-8 min-w-9 rounded-sm px-2 text-xs font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring',

@@ -1,9 +1,9 @@
 const vizeConectaPt = `
 ## Contexto
 
-O Vize Conecta é um SuperApp para o setor da construção civil, feito para centralizar processos operacionais, comunicação e gestão numa só plataforma.
+O Vize Conecta é um SuperApp para o setor da construção civil, feito para centralizar processos operacionais, comunicação e gestão em uma única plataforma.
 
-## O meu papel
+## Meu papel
 
 Atuei como desenvolvedor full stack na evolução contínua da plataforma: novas funcionalidades e integração entre frontend, backend e serviços externos.
 
@@ -11,23 +11,23 @@ Responsabilidades:
 
 - Interfaces com React e TypeScript
 - APIs REST com C# e ASP.NET Core
-- Integração entre frontend, backend e base de dados
+- Integração entre frontend, backend e banco de dados
 - Consumo de APIs internas e externas
 - Correção de bugs e refatoração
-- Cerimónias Scrum
+- Cerimônias Scrum
 - Clean Code e SOLID
 
 ## Qualidade
 
-Além do desenvolvimento, participei nas atividades de QA: testes funcionais, de API, de integração e de regressão; validação de requisitos; e abordagem Shift Left.
+Além do desenvolvimento, participei das atividades de QA: testes funcionais, de API, de integração e de regressão; validação de requisitos; e abordagem Shift Left.
 
 ## Resultado
 
-Evolução contínua do SuperApp, integrações entre vários serviços, e maior qualidade nas entregas.
+Evolução contínua do SuperApp, integrações entre vários serviços e maior qualidade nas entregas.
 
 ## Stack
 
-Frontend: React, TypeScript, JavaScript. Backend: C#, ASP.NET Core. Base de dados: SQL Server. Práticas: Clean Code, SOLID, CQRS, arquitetura em camadas, DDD, Git, Scrum.
+Frontend: React, TypeScript, JavaScript. Backend: C#, ASP.NET Core. Banco de dados: SQL Server. Práticas: Clean Code, SOLID, CQRS, arquitetura em camadas, DDD, Git, Scrum.
 `.trim()
 
 const vizeConectaEn = `
@@ -65,11 +65,11 @@ Frontend: React, TypeScript, JavaScript. Backend: C#, ASP.NET Core. Database: SQ
 const obrifyPt = `
 ## Contexto
 
-O Obrify é uma plataforma web para gestão de obras, desenvolvida para centralizar processos operacionais da construção civil num ambiente multi-tenant. Reúne planeamento, acompanhamento de execução, medição, controlo de custos, qualidade, produtividade e indicadores.
+O Obrify é uma plataforma web para gestão de obras, desenvolvida para centralizar processos operacionais da construção civil em um ambiente multi-tenant. Reúne planejamento, acompanhamento de execução, medição, controle de custos, qualidade, produtividade e indicadores.
 
-## O meu papel
+## Meu papel
 
-Atuei como desenvolvedor full stack, responsável pelo desenvolvimento e evolução contínua da plataforma — frontend, backend, base de dados e sistemas externos.
+Atuei como desenvolvedor full stack, responsável pelo desenvolvimento e evolução contínua da plataforma — frontend, backend, banco de dados e sistemas externos.
 
 Responsabilidades:
 
@@ -80,12 +80,12 @@ Responsabilidades:
 - Módulos de gestão de obras, programação semanal, acompanhamento de execução, mapas sinópticos, medições, custos, mão de obra, materiais, qualidade, ocorrências e dashboards
 - Integração com ERP e processos assíncronos com background workers
 - Correção de bugs e refatoração
-- Colaboração com produto e design em requisitos e planeamento
+- Colaboração com produto e design em requisitos e planejamento
 - Scrum, Clean Code, SOLID e arquitetura orientada a domínio
 
 ## Qualidade
 
-Participei na validação de requisitos e em testes funcionais (obras, planeamento, medições, custos e contratos), testes de APIs REST via Swagger (autenticação, autorização e regras de negócio), testes de integração e de regressão em funcionalidades críticas, e no acompanhamento de defeitos, com Shift Left.
+Participei da validação de requisitos e de testes funcionais (obras, planejamento, medições, custos e contratos), testes de APIs REST via Swagger (autenticação, autorização e regras de negócio), testes de integração e de regressão em funcionalidades críticas, e no acompanhamento de defeitos, com Shift Left.
 
 ## Resultado
 
@@ -98,7 +98,7 @@ Participei na validação de requisitos e em testes funcionais (obras, planeamen
 
 ## Stack
 
-Frontend: React 19, TypeScript, Vite, Tailwind CSS, TanStack React Query, React Router, React Hook Form, Axios, Recharts, i18next. Backend: C#, ASP.NET Core 8, Entity Framework Core, OpenIddict, FluentValidation, Polly. Base de dados: SQL Server.
+Frontend: React 19, TypeScript, Vite, Tailwind CSS, TanStack React Query, React Router, React Hook Form, Axios, Recharts, i18next. Backend: C#, ASP.NET Core 8, Entity Framework Core, OpenIddict, FluentValidation, Polly. Banco de dados: SQL Server.
 `.trim()
 
 const obrifyEn = `
@@ -143,21 +143,21 @@ Frontend: React 19, TypeScript, Vite, Tailwind CSS, TanStack React Query, React 
 const vizeChatPt = `
 ## Contexto
 
-O Vize Chat é uma plataforma omnichannel para centralizar o atendimento ao cliente em diferentes canais. Reúne conversas de WhatsApp, chat web e outros meios digitais numa só interface, com automação, integrações com sistemas corporativos e funcionalidades apoiadas por inteligência artificial.
+O Vize Chat é uma plataforma omnichannel para centralizar o atendimento ao cliente em diferentes canais. Reúne conversas de WhatsApp, chat web e outros meios digitais em uma única interface, com automação, integrações com sistemas corporativos e funcionalidades apoiadas por inteligência artificial.
 
-## O meu papel
+## Meu papel
 
 Atuei como desenvolvedor full stack na evolução contínua da plataforma — funcionalidades, integrações e melhorias de frontend e backend — com qualidade ao longo do ciclo de desenvolvimento.
 
 Responsabilidades:
 
 - Interfaces reutilizáveis com React e TypeScript
-- Funcionalidades de atendimento omnichannel, automação e experiência do utilizador
+- Funcionalidades de atendimento omnichannel, automação e experiência do usuário
 - APIs REST com C# e ASP.NET Core
-- Integração entre frontend, backend e bases de dados
+- Integração entre frontend, backend e bancos de dados
 - Consumo de APIs internas, externas e de mensageria
 - Correção de bugs e refatoração
-- Colaboração com produto, UX/UI e backend em requisitos e planeamento
+- Colaboração com produto, UX/UI e backend em requisitos e planejamento
 - Scrum, Clean Code, SOLID e arquitetura em camadas
 
 ## Qualidade
@@ -166,11 +166,11 @@ Validação de requisitos antes da implementação; testes funcionais, de APIs R
 
 ## Resultado
 
-Evolução contínua da plataforma omnichannel, integração entre vários serviços e APIs para comunicação em tempo real, e maior estabilidade através de práticas de qualidade ao longo do ciclo — do refinamento à produção.
+Evolução contínua da plataforma omnichannel, integração entre vários serviços e APIs para comunicação em tempo real e maior estabilidade por meio de práticas de qualidade ao longo do ciclo — do refinamento até a produção.
 
 ## Stack
 
-Frontend: React, TypeScript, JavaScript. Backend: C#, ASP.NET Core, REST APIs. Base de dados: SQL Server.
+Frontend: React, TypeScript, JavaScript. Backend: C#, ASP.NET Core, REST APIs. Banco de dados: SQL Server.
 `.trim()
 
 const vizeChatEn = `
@@ -209,9 +209,9 @@ Frontend: React, TypeScript, JavaScript. Backend: C#, ASP.NET Core, REST APIs. D
 const appControlePt = `
 ## Contexto
 
-O App Controle oferece uma vista centralizada de projetos de construção, contratos e indicadores operacionais. Foi desenhado para dar visibilidade sobre o estado dos projetos e organizar as tarefas do dia a dia.
+O App Controle oferece uma visão centralizada de projetos de construção, contratos e indicadores operacionais. Foi projetado para dar visibilidade sobre o estado dos projetos e organizar as tarefas do dia a dia.
 
-Não há neste repositório um case mais detalhado (problema, restrições, trade-offs ou métricas). O que existe é o contexto acima e as capturas do produto.
+Ainda não há um case mais detalhado neste repositório (problema, restrições, trade-offs ou métricas). O que existe é o contexto acima e as capturas de tela do produto.
 `.trim()
 
 const appControleEn = `
