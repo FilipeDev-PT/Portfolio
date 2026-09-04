@@ -1,71 +1,56 @@
-import { motion } from 'framer-motion'
-import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import { ProjectCard } from '@/components/ProjectCard'
+import { Reveal } from '@/components/Reveal'
 import { Section } from '@/components/Section'
+import { SectionKicker } from '@/components/SectionKicker'
 import { projects } from '@/data/content'
 
 export function Projects() {
   const { t } = useTranslation()
+  const featured = projects.filter((project) => project.layout !== 'compact')
+  const compact = projects.filter((project) => project.layout === 'compact')
 
   return (
     <Section id="projects">
-      <motion.h2
-        initial={{ opacity: 0, y: 16 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="font-display text-xl font-semibold text-slate-900 dark:text-white sm:text-2xl md:text-3xl"
-      >
-        {t('projects.title')}
-      </motion.h2>
-      <p className="mt-2 text-sm text-slate-600 dark:text-slate-400 sm:text-base">
-        {t('projects.subtitle')}
-      </p>
-      <ul className="mt-8 grid gap-4 sm:mt-10 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {projects.map((project, i) => (
-          <motion.li
-            key={project.id}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-40px' }}
-            transition={{ duration: 0.4, delay: i * 0.06 }}
-          >
-            <article className="flex h-full flex-col rounded-xl border border-slate-200 bg-white p-4 shadow-sm transition hover:border-slate-300 hover:shadow dark:border-slate-800 dark:bg-slate-900/50 dark:hover:border-slate-700 dark:hover:bg-slate-800/50 sm:p-5">
-              <h3 className="font-display text-base font-semibold text-slate-900 dark:text-white sm:text-lg">
-                {project.title}
-              </h3>
-              <p className="mt-2 flex-1 text-xs text-slate-600 dark:text-slate-400 sm:text-sm">
-                {project.description}
-              </p>
-              <div className="mt-3 flex flex-wrap gap-1.5 sm:mt-4 sm:gap-2">
-                {project.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="rounded bg-slate-200 px-2 py-0.5 text-xs text-slate-700 dark:bg-slate-800 dark:text-slate-300"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-              <div className="mt-3 flex flex-wrap gap-2 sm:mt-4 sm:gap-3">
-                <Link
-                  to={`/projects/${project.slug}`}
-                  className="min-h-[44px] inline-flex items-center rounded text-sm font-medium text-violet-600 hover:underline focus:outline-none focus:ring-2 focus:ring-violet-400 focus:ring-offset-2 dark:text-violet-400 dark:focus:ring-offset-slate-900"
-                >
-                  {t('projects.viewDetails')}
-                </Link>
-                {project.repo && (
-                  <a
-                    href={project.repo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="min-h-[44px] inline-flex items-center rounded text-sm font-medium text-violet-600 hover:underline focus:outline-none focus:ring-2 focus:ring-violet-400 focus:ring-offset-2 dark:text-violet-400 dark:focus:ring-offset-slate-900"
-                  >
-                    {t('projects.repository')}
-                  </a>
-                )}
-              </div>
-            </article>
-          </motion.li>
+      <Reveal>
+        <SectionKicker index="02">{t('projects.kicker')}</SectionKicker>
+        <h2 className="max-w-3xl font-serif text-h2 font-medium text-foreground">
+          {t('projects.title')}
+        </h2>
+        <p className="mt-4 max-w-2xl text-muted-foreground">{t('projects.subtitle')}</p>
+      </Reveal>
+
+      <div className="mt-14 flex flex-col gap-20 md:mt-20 md:gap-28">
+        {featured.map((project, i) => (
+          <Reveal key={project.id} delay={i * 0.05}>
+            <ProjectCard
+              project={project}
+              index={i + 1}
+              copy={{
+                description: t(`projects.items.${project.id}.description`),
+                role: t(`projects.items.${project.id}.role`),
+                outcome: t(`projects.items.${project.id}.outcome`),
+              }}
+            />
+          </Reveal>
+        ))}
+      </div>
+
+      <ul className="mt-16 grid gap-6 md:mt-20 md:grid-cols-2">
+        {compact.map((project, i) => (
+          <li key={project.id}>
+            <Reveal delay={i * 0.06}>
+              <ProjectCard
+                project={project}
+                index={featured.length + i + 1}
+                copy={{
+                  description: t(`projects.items.${project.id}.description`),
+                  role: t(`projects.items.${project.id}.role`),
+                  outcome: t(`projects.items.${project.id}.outcome`),
+                }}
+              />
+            </Reveal>
+          </li>
         ))}
       </ul>
     </Section>

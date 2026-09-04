@@ -1,10 +1,9 @@
 import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 import { Hero } from '@/sections/Hero'
-import { About } from '@/sections/About'
-import { Experience } from '@/sections/Experience'
 import { Projects } from '@/sections/Projects'
-import { Skills } from '@/sections/Skills'
+import { Experience } from '@/sections/Experience'
+import { About } from '@/sections/About'
 import { Contact } from '@/sections/Contact'
 import type { SectionId } from '@/types'
 
@@ -16,17 +15,16 @@ export function HomePage() {
     if (!scrollTo) return
 
     requestAnimationFrame(() => {
-      document.getElementById(scrollTo)?.scrollIntoView({ behavior: 'smooth' })
+      document.getElementById(scrollTo)?.scrollIntoView()
     })
   }, [location.state])
 
   return (
     <>
       <Hero />
-      <About />
-      <Experience />
       <Projects />
-      <Skills />
+      <Experience />
+      <About />
       <Contact />
     </>
   )

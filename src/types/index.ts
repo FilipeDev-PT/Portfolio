@@ -1,22 +1,20 @@
 export interface Experience {
   id: string
-  role: string
   company: string
-  period: string
-  description: string
   tags?: string[]
 }
+
+export type ProjectLayout = 'featured' | 'inverted' | 'compact'
 
 export interface Project {
   id: string
   slug: string
   title: string
-  description: string
-  details: string
+  layout: ProjectLayout
   screenshots: string[]
-  repo?: string
-  liveUrl?: string
   tags: string[]
+  liveUrl?: string
+  repo?: string
 }
 
 export interface Skill {

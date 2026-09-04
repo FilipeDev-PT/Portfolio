@@ -1,63 +1,53 @@
-import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
+import { Badge } from '@/components/ui/badge'
+import { Reveal } from '@/components/Reveal'
 import { Section } from '@/components/Section'
-import type { Experience } from '@/types'
+import { SectionKicker } from '@/components/SectionKicker'
 import { experiences } from '@/data/content'
 
 export function Experience() {
   const { t } = useTranslation()
 
   return (
-    <Section id="experience">
-      <motion.h2
-        initial={{ opacity: 0, y: 16 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="font-display text-xl font-semibold text-slate-900 dark:text-white sm:text-2xl md:text-3xl"
-      >
-        {t('experience.title')}
-      </motion.h2>
-      <p className="mt-2 text-sm text-slate-600 dark:text-slate-400 sm:text-base">
-        {t('experience.subtitle')}
-      </p>
-      <ul className="mt-8 space-y-8 sm:mt-10 sm:space-y-10">
-        {Array.isArray(experiences) &&
-          experiences.map((exp: Experience, i: number) => (
-            <motion.li
-              key={exp.id}
-              initial={{ opacity: 0, x: -16 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: '-40px' }}
-              transition={{ duration: 0.4, delay: i * 0.08 }}
-              className="relative border-l-2 border-violet-500/50 pl-4 dark:border-violet-600/50 sm:pl-6 before:absolute before:left-[-5px] before:top-0 before:h-2 before:w-2 before:rounded-full before:bg-violet-500"
-            >
-              <div className="flex flex-col gap-1 sm:flex-row sm:flex-wrap sm:items-baseline sm:justify-between">
-                <h3 className="font-display text-base font-semibold text-slate-900 dark:text-white sm:text-lg">
-                  {exp.role}
-                </h3>
-                <span className="text-xs text-slate-500 sm:text-sm">{exp.period}</span>
-              </div>
-              <p className="mt-0.5 text-sm font-medium text-violet-600 dark:text-violet-400 sm:text-base">
-                {exp.company}
-              </p>
-              <p className="mt-2 text-sm text-slate-600 dark:text-slate-400 sm:text-base">
-                {exp.description}
+    <Section id="experience" className="bg-muted/60">
+      <Reveal>
+        <SectionKicker index="03">{t('experience.kicker')}</SectionKicker>
+        <h2 className="max-w-3xl font-serif text-h2 font-medium text-foreground">
+          {t('experience.title')}
+        </h2>
+        <p className="mt-4 max-w-2xl text-muted-foreground">{t('experience.subtitle')}</p>
+      </Reveal>
+
+      <ol className="mt-14 divide-y divide-border border-y border-border">
+        {experiences.map((exp, i) => (
+          <li key={exp.id} className="grid gap-4 py-10 md:grid-cols-12 md:gap-8">
+            <p className="font-serif text-4xl text-secondary md:col-span-2" aria-hidden>
+              {String(i + 1).padStart(2, '0')}
+            </p>
+            <div className="md:col-span-6">
+              <h3 className="font-serif text-2xl font-medium tracking-tight text-foreground">
+                {t(`experience.items.${exp.id}.role`)}
+              </h3>
+              <p className="mt-1 text-foreground">{exp.company}</p>
+              <p className="mt-4 max-w-xl text-muted-foreground">
+                {t(`experience.items.${exp.id}.description`)}
               </p>
               {exp.tags?.length ? (
-                <div className="mt-3 flex flex-wrap gap-1.5 sm:gap-2">
-                  {exp.tags.map((tag: string) => (
-                    <span
-                      key={tag}
-                      className="rounded-full bg-slate-200 px-2.5 py-0.5 text-xs text-slate-700 dark:bg-slate-800 dark:text-slate-300"
-                    >
-                      {tag}
-                    </span>
+                <ul className="mt-4 flex flex-wrap gap-1.5">
+                  {exp.tags.map((tag) => (
+                    <li key={tag}>
+                      <Badge>{tag}</Badge>
+                    </li>
                   ))}
-                </div>
+                </ul>
               ) : null}
-            </motion.li>
-          ))}
-      </ul>
+            </div>
+            <p className="font-mono text-xs uppercase tracking-wider text-muted-foreground md:col-span-4 md:text-right">
+              {t(`experience.items.${exp.id}.period`)}
+            </p>
+          </li>
+        ))}
+      </ol>
     </Section>
   )
 }

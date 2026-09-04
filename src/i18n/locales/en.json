@@ -1,90 +1,121 @@
 {
   "nav": {
-    "about": "About",
+    "projects": "Work",
     "experience": "Experience",
-    "projects": "Projects",
-    "skills": "Skills",
-    "contact": "Contact"
+    "about": "About",
+    "contact": "Contact",
+    "menu": "Menu"
+  },
+  "a11y": {
+    "skip": "Skip to content",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "language": "Language",
+    "mainNav": "Main"
   },
   "hero": {
-    "tagline": "Developer & problem solver",
-    "subtitle": "I build web applications with a focus on clarity, performance, and maintainability.",
-    "viewProjects": "View projects",
-    "getInTouch": "Get in touch"
-  },
-  "about": {
-    "title": "About me",
-    "heading": "Hi, I'm Filipe",
-    "intro": "I'm a developer focused on building clear, maintainable solutions. I care about user experience, performance, and clean architecture.",
-    "bio": "I've been working across the stack — from front-end interfaces to backend services — and I enjoy turning ideas into reliable products. When I'm not coding, I like to keep learning and exploring new tools and practices."
-  },
-  "experience": {
-    "title": "Experience",
-    "subtitle": "My career path and main roles.",
-    "experiences": [
-      {
-        "id": "1",
-        "role": "Senior Developer",
-        "company": "Company Name",
-        "period": "2022 – Present",
-        "description": "Leading features and improvements for web products. Working with React, TypeScript, and modern tooling. Collaborating with design and product to deliver accessible, performant UIs.",
-        "tags": ["React", "TypeScript", "Node.js"]
-      },
-      {
-        "id": "2",
-        "role": "Full Stack Developer",
-        "company": "Previous Company",
-        "period": "2020 – 2022",
-        "description": "Built and maintained customer-facing and internal applications. Contributed to APIs, databases, and front-end interfaces.",
-        "tags": ["JavaScript", "Python", "PostgreSQL"]
-      },
-      {
-        "id": "3",
-        "role": "Junior Developer",
-        "company": "First Company",
-        "period": "2018 – 2020",
-        "description": "Started my career building small features and fixing bugs. Learned best practices in version control, code review, and teamwork.",
-        "tags": ["HTML", "CSS", "JavaScript"]
-      }
-    ]
+    "kicker": "Full-stack developer",
+    "subtitle": "I build React and C# platforms for operations teams — construction management, omnichannel support, and internal tools.",
+    "viewProjects": "Selected work",
+    "getInTouch": "Contact"
   },
   "projects": {
-    "title": "Projects",
-    "subtitle": "A selection of things I've built or contributed to.",
-    "viewDetails": "View details",
-    "repository": "Repository"
+    "kicker": "Selected work",
+    "title": "Platforms I’ve shipped",
+    "subtitle": "Construction operations, omnichannel support, and internal tools — React and TypeScript on the front, C# and SQL behind them.",
+    "viewCase": "View case",
+    "roleLabel": "Role",
+    "outcomeLabel": "Outcome",
+    "items": {
+      "vize-conecta": {
+        "description": "A construction SuperApp that centralizes workflows, communication, and operational processes for engineering teams.",
+        "role": "Full-stack developer — interfaces, REST APIs, and service integrations.",
+        "outcome": "Ongoing platform evolution, integrations across services, and QA throughout delivery."
+      },
+      "obrify": {
+        "description": "A multi-tenant field platform for construction: planning, execution tracking, costs, quality, and dashboards.",
+        "role": "Full-stack developer — layered architecture, JWT/MFA, ERP sync, and product modules.",
+        "outcome": "Weekly scheduling, synoptic maps, operational dashboards, and asynchronous ERP integration."
+      },
+      "vize-chat": {
+        "description": "An omnichannel platform that gathers WhatsApp, web chat, and other channels in one support interface.",
+        "role": "Full-stack developer — UI, APIs, messaging integrations, and automation features.",
+        "outcome": "Real-time channel integrations and quality practices from refinement through production."
+      },
+      "app-controle": {
+        "description": "A construction platform for project tracking, contracts, and operational workflows.",
+        "role": "",
+        "outcome": "A centralized view of projects, contracts, and operational indicators."
+      }
+    }
   },
   "projectDetail": {
-    "backToProjects": "Back to projects",
-    "screenshots": "Screenshots",
-    "aboutProject": "About the project",
+    "backToProjects": "Back to work",
+    "screenshots": "Product",
+    "aboutProject": "Case",
     "liveDemo": "Live demo",
     "repository": "Repository",
     "previousScreenshot": "Previous screenshot",
     "nextScreenshot": "Next screenshot",
     "goToScreenshot": "Go to screenshot {{number}}",
-    "screenshot": "screenshot {{current}} of {{total}}"
+    "screenshot": "screenshot {{current}} of {{total}}",
+    "roleLabel": "Role",
+    "stackLabel": "Stack"
+  },
+  "experience": {
+    "kicker": "Experience",
+    "title": "Where I work",
+    "subtitle": "Full-stack work on React and C# products, including overlapping roles.",
+    "items": {
+      "vize": {
+        "role": "Fullstack Developer",
+        "period": "May 2025 – Aug 2026",
+        "description": "Developed and maintained web applications using React and C#."
+      },
+      "fgr": {
+        "role": "Engineering Assistant",
+        "period": "Aug 2023 – Feb 2026",
+        "description": "Developed and maintained web applications using React and C#."
+      }
+    }
+  },
+  "about": {
+    "kicker": "About",
+    "title": "How I work",
+    "heading": "Hi, I’m Filipe.",
+    "intro": "I’m a full-stack developer. Most of my recent work is React and TypeScript on the front-end, C# and SQL on the back-end, and QA in the same delivery cycle — not as a separate phase.",
+    "bio": "I’ve been building and maintaining platforms used by operations and engineering teams: construction SuperApps, omnichannel support, and internal tools. I care about interfaces that hold up in production, APIs that stay integrable, and tests that catch the thing that would have shipped."
   },
   "skills": {
-    "title": "Skills",
-    "subtitle": "Technologies and tools I work with.",
+    "title": "Stack I use",
     "frontend": "Front-end",
     "backend": "Back-end",
-    "QA": "Quality Assurance",
+    "QA": "Quality",
     "tools": "Tools",
     "other": "Other"
   },
   "contact": {
-    "title": "Get in touch",
-    "subtitle": "I'm open to new opportunities and conversations. Say hello.",
-    "emailMe": "Email me"
+    "kicker": "Contact",
+    "title": "Start a conversation",
+    "subtitle": "Open to new work and concrete questions about a product. Email is the most reliable channel.",
+    "emailMe": "Email me",
+    "formName": "Name",
+    "formEmail": "Email",
+    "formMessage": "Message",
+    "formNamePlaceholder": "Your name",
+    "formEmailPlaceholder": "you@company.com",
+    "formMessagePlaceholder": "What you’re working on, and what you need.",
+    "formRequired": "Required",
+    "formSubmit": "Send message",
+    "formSending": "Sending…",
+    "formSuccess": "Your email client should open with the message ready. If it doesn’t, write to {{email}}.",
+    "formErrorGeneric": "The message wasn’t sent. Check the fields below.",
+    "errorName": "Enter your name (at least 2 characters).",
+    "errorEmail": "Enter a valid email address.",
+    "errorMessage": "Write a message (at least 10 characters).",
+    "elsewhere": "Also"
   },
   "footer": {
     "rights": "All rights reserved."
-  },
-  "a11y": {
-    "openMenu": "Open menu",
-    "closeMenu": "Close menu",
-    "language": "Language"
   }
 }
