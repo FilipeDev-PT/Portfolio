@@ -1,4 +1,5 @@
 import { type ReactNode } from 'react'
+import { cn } from '@/lib/utils'
 
 interface SectionProps {
   id: string
@@ -6,10 +7,10 @@ interface SectionProps {
   className?: string
 }
 
-export function Section({ id, children, className = '' }: SectionProps) {
+export function Section({ id, children, className }: SectionProps) {
   return (
-    <section id={id} className={`scroll-mt-16 py-12 sm:scroll-mt-20 sm:py-16 md:py-24 ${className}`}>
-      <div className="mx-auto max-w-5xl px-4 sm:px-6">{children}</div>
+    <section id={id} className={cn('scroll-mt-20 py-20 sm:py-24 md:py-32', className)}>
+      <div className="mx-auto max-w-page px-4 sm:px-6 lg:px-8">{children}</div>
     </section>
   )
 }

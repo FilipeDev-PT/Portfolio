@@ -8,7 +8,6 @@ export function ScrollToTop() {
   useEffect(() => {
     const scrollTo = (state as { scrollTo?: SectionId } | null)?.scrollTo
     if (scrollTo) return
-
     window.scrollTo(0, 0)
   }, [pathname, state])
 

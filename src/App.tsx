@@ -1,27 +1,44 @@
+import { lazy, Suspense } from 'react'
 import { Routes, Route } from 'react-router-dom'
-import { useTranslation } from 'react-i18next'
+import { MotionConfig } from 'motion/react'
 import { Navbar } from '@/components/Navbar'
+import { Footer } from '@/components/Footer'
+import { SkipLink } from '@/components/SkipLink'
 import { ScrollToTop } from '@/components/ScrollToTop'
+import { Toaster } from '@/components/ui/sonner'
 import { HomePage } from '@/pages/HomePage'
-import { ProjectDetail } from '@/pages/ProjectDetail'
+
+const ProjectDetail = lazy(() =>
+  import('@/pages/ProjectDetail').then((module) => ({ default: module.ProjectDetail })),
+)
+
+function PageFallback() {
+  return (
+    <div className="min-h-[60vh]" aria-busy="true">
+      <p className="sr-only">Loading</p>
+    </div>
+  )
+}
 
 function App() {
-  const { t } = useTranslation()
-
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-700 dark:bg-slate-950 dark:text-slate-300">
-      <ScrollToTop />
-      <Navbar />
-      <main>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/projects/:slug" element={<ProjectDetail />} />
-        </Routes>
-      </main>
-      <footer className="border-t border-slate-200 px-4 py-4 text-center text-xs text-slate-500 dark:border-slate-800 dark:text-slate-500 sm:py-6 sm:text-sm">
-        © {new Date().getFullYear()} Filipe Cristovam. {t('footer.rights')}
-      </footer>
-    </div>
+    <MotionConfig reducedMotion="user">
+      <div className="min-h-screen bg-background text-foreground">
+        <SkipLink />
+        <ScrollToTop />
+        <Navbar />
+        <main id="main-content">
+          <Suspense fallback={<PageFallback />}>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/projects/:slug" element={<ProjectDetail />} />
+            </Routes>
+          </Suspense>
+        </main>
+        <Footer />
+        <Toaster />
+      </div>
+    </MotionConfig>
   )
 }
 
